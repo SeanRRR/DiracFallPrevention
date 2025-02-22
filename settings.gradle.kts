@@ -55,7 +55,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Android-nRF-Toolbox"
+rootProject.name = "Dirac Sens App"
 
 include(":app")
 
