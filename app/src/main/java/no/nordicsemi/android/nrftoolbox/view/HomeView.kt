@@ -77,7 +77,9 @@ fun HomeScreen() {
     Scaffold(
         topBar = {
             Column {
-                TitleAppBar(stringResource(id = R.string.app_name))
+                TitleAppBar(
+                    //onMenuClick = {}
+                )
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -137,11 +139,12 @@ fun HomeScreen() {
                                     if (currentRoute == route) {
                                         Box(
                                             modifier = Modifier
-                                                .width(30.dp) // Width of the highlight
+                                                .width(47.dp) // Width of the highlight
                                                 .height(4.dp) // Thickness of the highlight bar
                                                 .background(Color.Black) // Color of the highlight bar
-                                                .clip(RoundedCornerShape(50)) // Makes the bar slightly rounded
-                                        )
+                                                .clip(RoundedCornerShape(50)), // Makes the bar slightly rounded
+
+                                            )
                                     }
                                     Icon(
                                         painter = painterResource(id = icon), // Use appropriate drawable
@@ -179,7 +182,7 @@ fun HomeScreen() {
         ) {
             // Set drawable as background
             Image(
-                painter = painterResource(id = R.drawable.home_background_2), // Replace with your actual drawable
+                painter = painterResource(id = R.drawable.home_background_5), // Replace with your actual drawable
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
@@ -243,7 +246,7 @@ fun HomeScreen() {
                                 .padding(6.dp)
                                 .fillMaxWidth()
                                 .height(180.dp),
-                            shape = RoundedCornerShape(16.dp),
+                            shape = RoundedCornerShape(12.dp),
                             colors = CardDefaults.cardColors(containerColor = lightBackground),
                             elevation = CardDefaults.cardElevation(6.dp)
                         ) {
